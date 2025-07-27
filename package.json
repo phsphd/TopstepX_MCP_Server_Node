@@ -1,0 +1,35 @@
+{
+  "name": "topstepx-mcp-server",
+  "version": "0.1.0",
+  "description": "An MCP Server for TopstepX Trading Tools",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "topstepx-mcp-server": "./build/src/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "start": "node build/src/index.js",
+    "build": "tsc && node -e \"require('fs').chmodSync('build/src/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/src/index.js",
+    "test": "jest --config jest.config.cjs --coverage --testTimeout=5000 --detectOpenHandles",
+    "test:watch": "jest --config jest.config.cjs --watch",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}
