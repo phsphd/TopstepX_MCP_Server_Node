@@ -1,5 +1,6 @@
 # TopstepX MCP Server
-![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=phsphd.TopstepX_MCP_Server_Node)
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=phsphd.TopstepX_MCP_Server_Node
+
 An MCP (Model Context Protocol) server for TopstepX trading platform that provides tools for managing positions, orders, and market data.
 
 ## Features
